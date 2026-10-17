@@ -1,183 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Rohit Thakur — Senior Software Engineer specializing in frontend architecture and performance." />
-  <title>Rohit Thakur | Senior Software Engineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="Rohit Thakur — Senior Software Engineer building scalable frontend platforms, real-time trading experiences, and high-performance web applications.">
+  <title>Rohit Thakur — Senior Software Engineer</title>
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: 0B1020_1;
-      color: E8EDF7_1;
-      font: 16px/1.7 Arial, sans-serif;
-    }
-    a { color: 8AB4FF_1; text-decoration: none; }
-    a:hover { color: C3D7FF_1; }
-    .wrap { width: min(1000px, 90%); margin: auto; }
-    header {
-      display: flex; justify-content: space-between;
-      align-items: center; padding: 24px 0;
-      border-bottom: 1px solid 25304A_1;
-    }
-    nav { display: flex; gap: 18px; flex-wrap: wrap; }
-    .hero { padding: 90px 0 65px; }
-    .eyebrow { color: 8AB4FF_1; font-weight: bold; }
-    h1 { font-size: clamp(38px, 7vw, 66px); line-height: 1.1; margin: 14px 0; }
-    h2 { font-size: 28px; margin-bottom: 12px; }
-    .muted { color: A8B3C9_1; }
-    .buttons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
-    .btn {
-      display: inline-block; padding: 10px 17px;
-      border: 1px solid 52678C_1; border-radius: 10px;
-    }
-    .primary { background: 8AB4FF_1; color: 10182A_1; font-weight: bold; }
-    section { padding: 38px 0; }
-    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    .card {
-      background: 121A2D_1; border: 1px solid 26334E_1;
-      border-radius: 16px; padding: 23px;
-    }
-    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 15px; }
-    .tag { background: 202C45_1; border-radius: 6px; padding: 4px 9px; font-size: 13px; }
-    footer { border-top: 1px solid 25304A_1; padding: 25px 0; margin-top: 35px; }
-    @media (max-width: 650px) {
-      header { align-items: flex-start; gap: 15px; flex-direction: column; }
-      .grid { grid-template-columns: 1fr; }
-      .hero { padding-top: 60px; }
-    }
+    :root{color-scheme:dark;--bg:#090d18;--panel:#101727;--panel2:#121d31;--line:#26334c;--text:#edf2ff;--muted:#9aa8c2;--blue:#9db7ff;--cyan:#7ce7e0;--green:#86efac;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{margin:0;background:radial-gradient(ellipse at 80% -10%,#1b2c51 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(9,13,24,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(70,88,124,.35)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:750;letter-spacing:-.4px}
+    .brand-mark{display:grid;place-items:center;width:39px;height:39px;border-radius:13px;background:linear-gradient(135deg,#b9c9ff,#6f8fff);color:#10172a;font-size:18px;box-shadow:0 8px 30px #7191ff25}
+    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.8px;font-weight:650;margin-top:-3px}
+    .navlinks{display:flex;align-items:center;gap:27px;color:#bdc8dc;font-size:13px}
+    .navlinks a:hover{color:#fff}.navlinks .nav-cta{border:1px solid #405275;padding:9px 14px;border-radius:10px;color:var(--text)}
+    .hero{padding:104px 0 82px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.8fr);align-items:center;gap:68px}
+    .availability{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid #29483f;background:#10241f;border-radius:99px;color:#b6f6d0;font-size:11px;letter-spacing:.7px;font-weight:700}
+    .pulse{width:7px;height:7px;border-radius:50%;background:#6ee7a3;box-shadow:0 0 0 4px #6ee7a31c}
+    .eyebrow{margin:25px 0 12px;color:var(--blue);font-size:11px;letter-spacing:2.4px;font-weight:800}
+    h1{font-size:clamp(43px,6.5vw,76px);line-height:1.04;letter-spacing:-3.8px;margin:0;max-width:760px}
+    .gradient{background:linear-gradient(100deg,#f4f6ff 5%,#a9bcff 52%,#83e5e0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{max-width:690px;color:#aebbd2;font-size:17px;line-height:1.85;margin:24px 0 0}
+    .hero-copy strong{color:#edf2ff;font-weight:650}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid #364764;background:#121b2c;color:#eaf0ff;border-radius:11px;padding:12px 17px;font-size:13px;font-weight:700;transition:transform .2s,border-color .2s,background .2s}
+    .btn:hover{transform:translateY(-2px);border-color:#809bde}.btn.primary{background:linear-gradient(135deg,#b9c9ff,#88a3ff);color:#11182a;border-color:transparent}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:20px;margin-top:31px;color:#8796b2;font-size:12px}.hero-meta span{display:flex;align-items:center;gap:8px}
+    .hero-card{position:relative;border:1px solid #344363;background:linear-gradient(150deg,#17243aee,#0f1625ee);border-radius:24px;padding:24px;box-shadow:0 30px 90px #0005;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:210px;height:210px;right:-100px;top:-105px;background:#8da9ff25;filter:blur(3px);border-radius:50%}
+    .card-top{display:flex;justify-content:space-between;align-items:center;position:relative}.card-label{color:#91a0bb;font-size:10px;letter-spacing:1.5px;font-weight:800}
+    .live-chip{font-size:10px;color:#9df0c3;background:#163328;padding:5px 8px;border-radius:6px}
+    .metric-main{padding:31px 0 25px;border-bottom:1px solid #29364e}.metric-main .number{font-size:55px;line-height:1.2;font-weight:800;letter-spacing:-3px}.metric-main .number span{color:var(--cyan)}.metric-main p{color:#9caac2;font-size:13px;margin:7px 0 0}
+    .metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:18px}.metric{border:1px solid #29364c;border-radius:13px;padding:15px;background:#111a2a}.metric strong{display:block;font-size:25px;letter-spacing:-1px}.metric span{display:block;color:#96a4bd;font-size:11px;margin-top:4px;line-height:1.5}
+    .card-foot{display:flex;align-items:center;gap:8px;color:#8999b5;font-size:10px;margin-top:18px}
+    .section{padding:78px 0;border-top:1px solid #202b40}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:30px}.kicker{font-size:10px;letter-spacing:2.3px;font-weight:800;color:#91aaff}.section h2{font-size:clamp(29px,4vw,42px);line-height:1.2;letter-spacing:-1.7px;margin:9px 0 0}.section-intro{max-width:520px;color:var(--muted);font-size:14px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.panel{background:linear-gradient(145deg,#121c2e,#0f1624);border:1px solid var(--line);border-radius:18px;padding:25px}.panel p{color:#aab7ce;font-size:14px;margin:0 0 14px}.panel p:last-child{margin-bottom:0}.panel h3{font-size:16px;margin:0 0 14px}.highlight-list{display:grid;gap:13px}.highlight{display:flex;gap:12px;align-items:flex-start}.highlight-icon{width:34px;height:34px;flex:0 0 34px;border:1px solid #344565;background:#18243a;border-radius:10px;display:grid;place-items:center;color:#a9bdff;font-size:15px}.highlight strong{display:block;font-size:13px}.highlight span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+    .skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill-card{border:1px solid var(--line);background:#101726;border-radius:15px;padding:21px}.skill-card .symbol{color:var(--cyan);font-size:18px}.skill-card h3{font-size:14px;margin:12px 0 10px}.skill-card p{color:var(--muted);font-size:12px;line-height:1.8;margin:0}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.tag{font-size:10px;padding:4px 8px;border:1px solid #2b3953;background:#172136;border-radius:6px;color:#c4d0e8}
+    .impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.impact{padding:21px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(150deg,#151f32,#0e1522)}.impact strong{display:block;font-size:35px;line-height:1.25;letter-spacing:-1.8px;color:#dce5ff}.impact strong em{font-style:normal;color:var(--cyan)}.impact span{display:block;color:var(--muted);font-size:12px;margin-top:9px;line-height:1.55}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{position:relative;border:1px solid var(--line);background:linear-gradient(145deg,#131d30,#0e1522);border-radius:18px;padding:25px;overflow:hidden}.project:after{content:"";position:absolute;width:120px;height:120px;right:-70px;bottom:-75px;border-radius:50%;background:#8fa9ff12}.project-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.project-index{font-size:11px;color:#91a8e5;letter-spacing:1.5px}.project h3{font-size:18px;letter-spacing:-.4px;margin:20px 0 10px}.project p{color:var(--muted);font-size:13px;line-height:1.8;margin:0}.project .tags{margin-top:18px}.project .tags .tag{color:#cbd7f1}
+    .timeline{position:relative;display:grid;gap:15px}.job{display:grid;grid-template-columns:185px 1fr;gap:25px;border:1px solid var(--line);border-radius:16px;padding:23px;background:#101726}.job-date{font-size:11px;color:#9eafff;font-weight:750;letter-spacing:.7px}.job-company{font-size:12px;color:var(--muted);margin-top:7px}.job h3{font-size:17px;margin:0}.job ul{padding-left:18px;margin:12px 0 0;color:#aab7cc;font-size:12px;line-height:1.9}.job li{padding-left:3px;margin-bottom:4px}.job li::marker{color:#8ea7ff}
+    .awards{display:flex;gap:12px;flex-wrap:wrap}.award{display:flex;align-items:center;gap:10px;padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:#111a29;color:#dce5f7;font-size:12px}.award b{color:#f2d18c;font-size:16px}
+    .contact{display:grid;grid-template-columns:1fr .8fr;gap:30px;align-items:center;border:1px solid #334363;background:radial-gradient(ellipse at 90% 0%,#263d6629,transparent 50%),linear-gradient(135deg,#151f33,#101625);border-radius:22px;padding:35px}.contact h2{margin-top:10px}.contact p{color:var(--muted);font-size:14px;max-width:540px}.contact-links{display:grid;gap:10px}.contact-link{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid #34425d;border-radius:10px;padding:12px 14px;color:#dce5f7;font-size:12px}.contact-link:hover{border-color:#91aaff;background:#1a263b}.contact-link span{color:#94a5c4}
+    footer{border-top:1px solid #202b40;padding:25px 0;color:#7f8ca5;font-size:11px}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;gap:38px;padding-top:76px}.hero-card{max-width:560px}.skill-grid{grid-template-columns:repeat(2,1fr)}.impact-grid{grid-template-columns:repeat(2,1fr)}.section-head{align-items:flex-start;flex-direction:column}.contact{grid-template-columns:1fr}.contact-links{max-width:500px}}
+    @media(max-width:650px){.wrap{width:min(100% - 30px,var(--max))}.nav{height:auto;min-height:68px;flex-wrap:wrap;padding:14px 0}.navlinks{width:100%;gap:17px;overflow:auto;padding-bottom:4px;font-size:12px}.navlinks .nav-cta{padding:6px 10px}.hero{padding:60px 0 55px;gap:32px}h1{letter-spacing:-2.5px}.hero-copy{font-size:15px}.hero-meta{gap:12px}.section{padding:55px 0}.about-grid,.projects{grid-template-columns:1fr}.skill-grid{grid-template-columns:1fr}.impact-grid{gap:9px}.impact{padding:16px}.impact strong{font-size:29px}.job{grid-template-columns:1fr;gap:12px}.contact{padding:24px}.metric-main .number{font-size:48px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <strong>Rohit Thakur<span style="color:#8ab4ff">.</span></strong>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+  <div class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Rohit Thakur home">
+        <span class="brand-mark">RT</span>
+        <span>Rohit Thakur<small>ENGINEERING · FRONTEND</small></span>
+      </a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#skills">Expertise</a><a href="#impact">Impact</a><a href="#experience">Experience</a><a href="#projects">Work</a>
+        <a class="nav-cta" href="#contact">Let's connect ↗</a>
       </nav>
-    </header>
+    </div>
+  </div>
 
-    <main>
-      <div class="hero">
-        <div class="eyebrow">SENIOR SOFTWARE ENGINEER</div>
-        <h1>Building scalable<br />frontend experiences.</h1>
-        <p class="muted">
-          I am a software engineer with 7+ years of experience
-          building frontend platforms, real-time applications,
-          and high-performance user experiences.
-        </p>
-        <div class="buttons">
-          <a class="btn primary" href="#projects">Explore my work ↓</a>
-          <a class="btn" href="#contact">Contact me</a>
+  <main id="home">
+    <section class="wrap hero">
+      <div>
+        <div class="availability"><span class="pulse"></span> SENIOR SOFTWARE ENGINEER</div>
+        <div class="eyebrow">ARCHITECTURE · PERFORMANCE · REAL-TIME SYSTEMS</div>
+        <h1>Engineering the web at <span class="gradient">scale.</span></h1>
+        <p class="hero-copy">I'm <strong>Rohit Thakur</strong> — a Senior Software Engineer with 7+ years of experience building scalable frontend platforms, real-time trading experiences, and high-performance web applications for millions of users.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore selected work <span>↘</span></a>
+          <a class="btn" href="#contact">Get in touch <span>↗</span></a>
         </div>
+        <div class="hero-meta"><span>⌁ India</span><span>✳ Frontend platform engineering</span><span>◈ 7+ years experience</span></div>
       </div>
+      <aside class="hero-card" aria-label="Career highlights">
+        <div class="card-top"><span class="card-label">CAREER SNAPSHOT</span><span class="live-chip">● Impact driven</span></div>
+        <div class="metric-main"><div class="number">5<span>M+</span></div><p>Daily active users supported by trading platforms</p></div>
+        <div class="metrics">
+          <div class="metric"><strong>−30%</strong><span>Browser memory consumption</span></div>
+          <div class="metric"><strong>20 → 80%</strong><span>Automated test coverage</span></div>
+          <div class="metric"><strong>~20%</strong><span>Business revenue contribution of Pro Trader</span></div>
+          <div class="metric"><strong>50%</strong><span>Bundle-size reduction in earlier work</span></div>
+        </div>
+        <div class="card-foot"><span class="pulse"></span> Measurable outcomes. Thoughtful engineering.</div>
+      </aside>
+    </section>
 
-      <section id="about">
-        <h2>About me</h2>
-        <p class="muted">
-          I focus on frontend architecture, microfrontend architecture,
-          performance optimization, testing, and reliable web applications.
-          I enjoy solving complex engineering problems and collaborating
-          across teams to deliver meaningful product improvements.
-        </p>
-      </section>
-
-      <section id="skills">
-        <h2>Technical skills</h2>
-        <div class="card">
-          <div class="tags">
-            <span class="tag">JavaScript</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">React</span>
-            <span class="tag">SolidJS</span>
-            <span class="tag">Next.js</span>
-            <span class="tag">HTML & CSS</span>
-            <span class="tag">Microfrontends</span>
-            <span class="tag">Frontend Architecture</span>
-            <span class="tag">Vitest</span>
-            <span class="tag">Performance</span>
-            <span class="tag">CI/CD</span>
-            <span class="tag">WebSockets</span>
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">01 / ABOUT</div><h2>Beyond the interface.</h2></div><p class="section-intro">I connect product thinking with engineering depth to build frontend systems that stay fast, reliable, and maintainable as they grow.</p></div>
+        <div class="about-grid">
+          <div class="panel">
+            <h3>How I work</h3>
+            <p>I focus on frontend architecture, microfrontends, performance engineering, real-time systems, and platform improvements. I enjoy turning complex engineering challenges into reliable product experiences.</p>
+            <p>At Angel One, I've contributed to critical trading workflows, reusable platform components, live market-data experiences, and quality initiatives used across important product areas.</p>
+            <p>My approach combines hands-on implementation with technical direction, cross-functional delivery, mentoring, and pragmatic engineering standards.</p>
+          </div>
+          <div class="panel">
+            <h3>What I bring</h3>
+            <div class="highlight-list">
+              <div class="highlight"><div class="highlight-icon">⌘</div><div><strong>Frontend architecture</strong><span>Reusable systems, microfrontends, design systems, and clear domain boundaries.</span></div></div>
+              <div class="highlight"><div class="highlight-icon">↗</div><div><strong>Performance at scale</strong><span>Memory profiling, bundle optimization, rendering, and Core Web Vitals.</span></div></div>
+              <div class="highlight"><div class="highlight-icon">⌁</div><div><strong>Real-time experiences</strong><span>WebSocket data flows and responsive, high-frequency UI updates.</span></div></div>
+              <div class="highlight"><div class="highlight-icon">✓</div><div><strong>Engineering quality</strong><span>Automated testing, production debugging, mentoring, and delivery practices.</span></div></div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="projects">
-        <h2>Selected work</h2>
-        <p class="muted">Examples of engineering problems I work on.</p>
-        <div class="grid">
-          <article class="card">
-            <h3>Trading Platform Engineering</h3>
-            <p class="muted">
-              Frontend workflows for trading applications, with a focus
-              on responsive interfaces, real-time data, and reliability.
-            </p>
-            <div class="tags">
-              <span class="tag">SolidJS</span>
-              <span class="tag">WebSockets</span>
-              <span class="tag">Architecture</span>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Performance Optimization</h3>
-            <p class="muted">
-              Improving data retrieval, reducing unnecessary network
-              requests, and making frontend applications more efficient.
-            </p>
-            <div class="tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Profiling</span>
-              <span class="tag">APIs</span>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Testing & Reliability</h3>
-            <p class="muted">
-              Improving automated test coverage and maintainability
-              to catch regressions and support safer releases.
-            </p>
-            <div class="tags">
-              <span class="tag">Vitest</span>
-              <span class="tag">Unit Testing</span>
-            </div>
-          </article>
-          <article class="card">
-            <h3>Frontend Platform Improvements</h3>
-            <p class="muted">
-              Modernizing APIs, improving developer workflows,
-              and simplifying shared frontend patterns.
-            </p>
-            <div class="tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">Tooling</span>
-            </div>
-          </article>
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">02 / EXPERTISE</div><h2>My engineering toolkit.</h2></div><p class="section-intro">A practical toolkit spanning frontend frameworks, architecture, data flow, performance, and quality engineering.</p></div>
+        <div class="skill-grid">
+          <article class="skill-card"><div class="symbol">◈</div><h3>Frontend engineering</h3><p>Building accessible, responsive interfaces and reusable UI foundations.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Vue.js</span><span class="tag">SolidJS</span><span class="tag">Svelte</span><span class="tag">Tailwind CSS</span></div></article>
+          <article class="skill-card"><div class="symbol">⌘</div><h3>Architecture & platform</h3><p>Designing boundaries and shared patterns that improve delivery and maintainability.</p><div class="tags"><span class="tag">Microfrontends</span><span class="tag">Module Federation</span><span class="tag">Design Systems</span><span class="tag">Component-driven UI</span><span class="tag">System Design</span></div></article>
+          <article class="skill-card"><div class="symbol">⌁</div><h3>Data & state</h3><p>Managing client state and data integrations for complex interactive products.</p><div class="tags"><span class="tag">Redux Toolkit</span><span class="tag">Context API</span><span class="tag">React Query</span><span class="tag">REST</span><span class="tag">GraphQL</span><span class="tag">WebSocket</span></div></article>
+          <article class="skill-card"><div class="symbol">↗</div><h3>Performance engineering</h3><p>Finding bottlenecks and reducing work across loading, rendering, and runtime.</p><div class="tags"><span class="tag">Core Web Vitals</span><span class="tag">Code Splitting</span><span class="tag">Lazy Loading</span><span class="tag">Memory Profiling</span><span class="tag">Caching</span><span class="tag">CDN</span></div></article>
+          <article class="skill-card"><div class="symbol">✓</div><h3>Testing & reliability</h3><p>Building confidence through automated tests, quality gates, and production debugging.</p><div class="tags"><span class="tag">Vitest</span><span class="tag">Jest</span><span class="tag">Testing Library</span><span class="tag">CI/CD</span><span class="tag">Husky</span><span class="tag">Observability</span></div></article>
+          <article class="skill-card"><div class="symbol">⌬</div><h3>Backend & developer tools</h3><p>Working effectively across API integrations, cloud delivery, and engineering workflows.</p><div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Firebase</span><span class="tag">S3 presigned URLs</span><span class="tag">Git</span><span class="tag">Chrome DevTools</span></div></article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="contact">
-        <h2>Let's connect</h2>
-        <p class="muted">
-          I'm open to discussing senior frontend and software engineering
-          opportunities.
-        </p>
-        <div class="buttons">
-          <!-- Replace these example links with your real profile URLs. -->
-          <a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Email me</a>
-          <a class="btn" href="linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a class="btn" href="github.com" target="_blank" rel="noreferrer">GitHub</a>
+    <section class="section" id="impact">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">03 / IMPACT</div><h2>Outcomes over output.</h2></div><p class="section-intro">Selected metrics from the work described in my professional experience.</p></div>
+        <div class="impact-grid">
+          <div class="impact"><strong>5<em>M+</em></strong><span>Daily active users on trading platforms</span></div>
+          <div class="impact"><strong>30<em>%</em></strong><span>Lower browser memory consumption</span></div>
+          <div class="impact"><strong>80<em>%</em></strong><span>Automated test coverage, up from 20%</span></div>
+          <div class="impact"><strong>~20<em>%</em></strong><span>Overall business revenue attributed to Pro Trader platform</span></div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="muted">
-      © 2026 Rohit Thakur · Built with HTML & CSS
-    </footer>
-  </div>
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">04 / SELECTED WORK</div><h2>Systems I've helped shape.</h2></div><p class="section-intro">A high-level view of engineering work from my experience. Details are intentionally generalized where product internals are private.</p></div>
+        <div class="projects">
+          <article class="project"><div class="project-top"><span class="project-index">PROJECT / 01</span><span class="tag">Real-time systems</span></div><h3>Trading platform engineering</h3><p>Contributed to high-scale trading workflows across Order Pad, Markets, Portfolio, Basket Orders, Pledge, Option Strategy, Market Depth, and Account modules, with a focus on reliable user journeys and live data.</p><div class="tags"><span class="tag">SolidJS</span><span class="tag">Vue.js</span><span class="tag">WebSocket</span><span class="tag">Charting</span></div></article>
+          <article class="project"><div class="project-top"><span class="project-index">PROJECT / 02</span><span class="tag">Performance</span></div><h3>Frontend performance & memory</h3><p>Investigated memory leaks and rendering bottlenecks, reduced browser memory consumption by 30%, and optimized data retrieval to reduce unnecessary API requests and expensive client-side work.</p><div class="tags"><span class="tag">Profiling</span><span class="tag">Caching</span><span class="tag">Runtime optimization</span></div></article>
+          <article class="project"><div class="project-top"><span class="project-index">PROJECT / 03</span><span class="tag">Quality engineering</span></div><h3>Testing & release confidence</h3><p>Helped raise automated test coverage from 20% to 80%, supporting safer changes, fewer regressions, and more predictable delivery for critical frontend workflows.</p><div class="tags"><span class="tag">Vitest</span><span class="tag">Jest</span><span class="tag">Testing Library</span><span class="tag">CI/CD</span></div></article>
+          <article class="project"><div class="project-top"><span class="project-index">PROJECT / 04</span><span class="tag">Platform architecture</span></div><h3>Reusable frontend foundations</h3><p>Worked on shared components, microfrontend architecture, internal libraries, and development standards to improve consistency, team ownership, and delivery speed.</p><div class="tags"><span class="tag">Microfrontends</span><span class="tag">Design systems</span><span class="tag">Module Federation</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">05 / EXPERIENCE</div><h2>Where I've made an impact.</h2></div><p class="section-intro">Experience delivering business-critical frontend systems, platform improvements, and engineering standards.</p></div>
+        <div class="timeline">
+          <article class="job"><div><div class="job-date">JUL 2022 — PRESENT</div><div class="job-company">Angel One</div></div><div><h3>Senior Software Engineer</h3><ul><li>Architect and improve critical trading workflows serving 5M+ daily active users.</li><li>Lead frontend initiatives across Order Pad, Portfolio, Basket Orders, Markets, and Pledge.</li><li>Contribute to microfrontend architecture, reusable platform components, and real-time WebSocket data flows.</li><li>Reduced browser memory consumption by 30% and helped increase automated test coverage from 20% to 80%.</li><li>Contributed to the Pro Trader platform, described in my resume as contributing approximately 20% of overall business revenue.</li></ul></div></article>
+          <article class="job"><div><div class="job-date">JUN 2019 — JUL 2022</div><div class="job-company">Deqode</div></div><div><h3>Senior Solution Engineer</h3><ul><li>Delivered enterprise frontend applications using React, Next.js, and Vue.js across client engagements.</li><li>Built reusable internal libraries and component systems, reducing bundle size by approximately 50%.</li><li>Applied caching, CDN delivery, code splitting, lazy loading, and compression to improve frontend performance.</li><li>Mentored 5+ engineers and helped establish frontend standards, code review practices, and delivery workflows.</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recognition">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">06 / RECOGNITION</div><h2>Recognized by the team.</h2></div><p class="section-intro">Awards listed in my resume.</p></div>
+        <div class="awards"><div class="award"><b>✦</b> Angel One CEO Club Award</div><div class="award"><b>✦</b> Tech Titan <strong>×2</strong></div><div class="award"><b>✦</b> Star Team Player <strong>×3</strong></div><div class="award"><b>⌑</b> B.E. Computer Science · 2014–2018</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <div><div class="kicker">LET'S BUILD SOMETHING</div><h2>Have a challenging frontend problem?</h2><p>I'm interested in conversations about frontend architecture, platform engineering, performance, and senior engineering opportunities. Reach out and let's connect.</p><div class="actions"><a class="btn primary" href="mailto:Rohitt3275@gmail.com">Email Rohit ↗</a></div></div>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:Rohitt3275@gmail.com"><span>Email</span><strong>Rohitt3275@gmail.com ↗</strong></a>
+            <a class="contact-link" href="https://www.linkedin.com/in/rohitthakurt" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Connect ↗</strong></a>
+            <a class="contact-link" href="https://github.com/" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>Add your profile ↗</strong></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>© 2026 Rohit Thakur · Built with HTML, CSS & a focus on performance.</span><a href="#home">Back to top ↑</a></div></footer>
 </body>
 </html>
